@@ -4,12 +4,14 @@ import Foundation
 
 import SwiftUI
 // 1
+@MainActor
 struct Pet: Identifiable {
   let id = UUID()
   let petImage: Image
   let position: CGPoint
 }
 
+@MainActor
 extension Pet {
   static let backgroundPets: [Pet] = {
     let bounds = UIScreen.main.bounds
